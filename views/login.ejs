@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <% include header.html %>
+   </head>
+   <body>
+   
+      <div class='container'>
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+       <div class='form-box'>
+       <h2 class='text-center'>Login Form</h2>
+       <form role="form" method="post" action="/login">
+            
+           <!--Error part -->
+            <% if(typeof(errorMessage) !== 'undefined') {%>
+            <div class='alert alert-danger'>
+               <%= errorMessage %>
+            </div>
+            <%}%>
+           
+          <div class="form-group">
+             <label for="name">Email:</label>
+             <input type="email" name='username' placeholder='Email' class="form-control" id="username">
+           </div>
+
+           <div class="form-group">
+             <label for="password">Password:</label>
+             <input type="password" placeholder="password" class="form-control" name='password' id="password">
+           </div>
+           <center><button type="submit" class="btn btn-primary animated zoomin">Login</button>
+           <a href="/register" class='btn btn-info animated zoomin' title="register">Register</a></center>
+         </form>
+         </div>
+
+
+      </div>
+      </div>
+      <script type="text/javascript">
+     window.setTimeout(function(){
+      $(".alert").fadeTo(500,0).slideUp(500,function(){
+        $(this).remove();
+      });
+    },3000);
+    </script>
+ </body>
+</html>

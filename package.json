@@ -1,0 +1,26 @@
+{
+  "name": "task_management",
+  "description": "Task Management",
+  "version": "1.0.0",
+  "author": "Athira",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "bluebird": "^2.1.3",
+    "body-parser": "~1.15.1",
+    "bookshelf": "*",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "4.x",
+    "express-session": "*",
+    "knex": "*",
+    "moment": "^2.18.1",
+    "mysql": "*",
+    "nodemailer": "^0.7.1",
+    "passport": "*",
+    "passport-local": "*"
+  }
+}
